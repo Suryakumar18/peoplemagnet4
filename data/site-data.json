@@ -1,0 +1,195 @@
+{
+  "navigation": {
+    "links": [
+      { "name": "Find Passion", "href": "#hero" },
+      { "name": "Courses", "href": "#courses" },
+      { "name": "Skills", "href": "#skills" },
+      { "name": "Students", "href": "#testimonials" }
+    ]
+  },
+  "hero": {
+    "headline": ["Skillup.", "Grow.", "Succeed."],
+    "buttonText": "Explore Courses",
+    "cards": [
+      {
+        "image": "/placeholder.svg?height=400&width=300",
+        "label": "Marketing",
+        "course": "Marketing Course",
+        "topics": 100
+      },
+      {
+        "image": "/placeholder.svg?height=300&width=150",
+        "label": "Teaching",
+        "course": "Teaching Course",
+        "topics": 100
+      },
+      {
+        "image": "/placeholder.svg?height=300&width=150",
+        "label": "Coding",
+        "course": "Coding Course",
+        "topics": 100
+      }
+    ]
+  },
+  "categories": {
+    "headline": "Explore Our All Type Of Courses",
+    "tabs": [
+      { "id": "all", "name": "All Courses" },
+      { "id": "marketing", "name": "Marketing and Sales" },
+      { "id": "teaching", "name": "Teaching" },
+      { "id": "coding", "name": "Coding" },
+      { "id": "design", "name": "Designing and Creative" },
+      { "id": "language", "name": "Language Learning" }
+    ],
+    "courses": {
+      "marketing": [
+        {
+          "title": "Advance Digital Marketing - Agency Track",
+          "duration": "3 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        },
+        {
+          "title": "Advance Digital Marketing - Business Growth Track",
+          "duration": "3 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        },
+        {
+          "title": "Business Mastery and Success Program",
+          "duration": "4 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        }
+      ],
+      "teaching": [
+        {
+          "title": "Montessori Teacher Training - Professional Diploma",
+          "duration": "6 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        },
+        {
+          "title": "Video Editing & Post-Production Essential",
+          "duration": "2 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        },
+        {
+          "title": "AI Powered Advance Video Editing Program",
+          "duration": "3 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        }
+      ],
+      "coding": [
+        {
+          "title": "MERN Stack Development - Foundation Level",
+          "duration": "4 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        },
+        {
+          "title": "MERN Stack Development - Advance Level",
+          "duration": "3 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        },
+        {
+          "title": "Full Stack Java Development - Foundation Level",
+          "duration": "4 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        },
+        {
+          "title": "Full Stack Java Development - Advance Level",
+          "duration": "3 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        },
+        {
+          "title": "Full Stack Python Development - Foundation Level",
+          "duration": "4 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        },
+        {
+          "title": "Full Stack Python Development - Advance Level",
+          "duration": "3 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        }
+      ],
+      "design": [
+        {
+          "title": "Advanced UI/UX Design Program",
+          "duration": "3 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        },
+        {
+          "title": "Pro UI/UX Design & Product Experience Program",
+          "duration": "4 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        }
+      ],
+      "language": [
+        {
+          "title": "Spoken English",
+          "duration": "2 months",
+          "image": "/placeholder.svg?height=280&width=240"
+        }
+      ]
+    }
+  },
+  "skills": {
+    "headline": "Learn In-Demand Skills, Get Job Ready in Months",
+    "description": "The modern labor market dictates its own terms. Today, to be a competitive specialist requires more than professional skills.",
+    "stats": [{ "value": "5", "label": "Years Experience" }, { "value": "15", "label": "Types of Courses" }],
+    "features": [
+      {
+        "icon": "portfolio",
+        "title": "Industry Ready Portfolio",
+        "description": "Gain a Robust, Market Ready Portfolio of Projects to Showcase Your Skills to Employers"
+      },
+      {
+        "icon": "flexible",
+        "title": "Flexible Learning Path",
+        "description": "Study at Your Own Pace With On-Demand Access to all lessons and Materials"
+      },
+      {
+        "icon": "curriculum",
+        "title": "Up to Date Curriculum",
+        "description": "Courses are Continuously Updated to Reflect The Latest Tools and Trends in Digital Space"
+      }
+    ]
+  },
+  "testimonials": {
+    "headline": "What Our Students Say",
+    "reviews": [
+      {
+        "quote": "The teaching style is super clear and beginner-friendly. I now understand SEO, social media, and running ads — something I never thought I could learn this easily! Thank you!!!",
+        "name": "Praneeth S",
+        "role": "Freelancer",
+        "avatar": "/placeholder.svg?height=60&width=60"
+      },
+      {
+        "quote": "From a complete beginner to creating real full-stack projects — this course shaped my skills step by step. The guidance was practical and easy to follow, and it gave me the confidence to start my tech career.",
+        "name": "Nivetha",
+        "role": "Developer",
+        "avatar": "/placeholder.svg?height=60&width=60"
+      },
+      {
+        "quote": "This is the only course that gave me practical experience. Real projects, real guidance, and real results. Thank you Just Learn Digital team!!!",
+        "name": "Sameer SA",
+        "role": "Digital Marketing Head",
+        "avatar": "/placeholder.svg?height=60&width=60"
+      },
+      {
+        "quote": "This is the best course for beginners. The practical tasks, doubt sessions, and real project experience helped me confidently apply for developer roles.",
+        "name": "Vinoth",
+        "role": "Startup Owner",
+        "avatar": "/placeholder.svg?height=60&width=60"
+      },
+      {
+        "quote": "Before joining this course, marketing felt confusing. But the trainer made everything simple — from ads to content to strategy. Today, I confidently run digital campaigns for clients. Truly a career-changing course!",
+        "name": "Subin S",
+        "role": "Digital Marketing Executive",
+        "avatar": "/placeholder.svg?height=60&width=60"
+      }
+    ]
+  },
+  "footer": {
+    "newsletter": {
+      "headline": "Subscribe to our newsletter",
+      "description": "Get weekly updates on the newest courses right in your mailbox."
+    }
+  }
+}
