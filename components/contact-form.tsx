@@ -53,7 +53,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Call us at</p>
-                  <p className="text-navy font-semibold">+91 98765 43210</p>
+                  <p className="text-navy font-semibold">+91 9629959948</p>
                 </div>
               </div>
 
@@ -63,7 +63,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email us at</p>
-                  <p className="text-navy font-semibold">hello@justlearndigital.com</p>
+                  <p className="text-navy font-semibold">contact@justlearndigital.in</p>
                 </div>
               </div>
 
@@ -73,7 +73,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Visit us at</p>
-                  <p className="text-navy font-semibold">Chennai, Tamil Nadu, India</p>
+                  <p className="text-navy font-semibold">101/3, Iyyappa Nagar, 8th street, Narasimmapuram, Kuniyamuthur, Coimbatore, Tamil Nadu 641008</p>
                 </div>
               </div>
             </div>

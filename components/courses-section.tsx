@@ -161,6 +161,7 @@ interface Course {
 export function CoursesSection() {
   const [activeTab, setActiveTab] = useState<string>("all")
   const [isVisible, setIsVisible] = useState(false)
+  const [hasAnimated, setHasAnimated] = useState(false)
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
@@ -168,19 +169,35 @@ export function CoursesSection() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
+        // Always update visibility state for mobile scrolling
+        setIsVisible(entry.isIntersecting)
+        
+        // Only set hasAnimated once when first intersecting
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true)
         }
       },
-      { threshold: 0.1 },
+      { 
+        threshold: 0.1,
+        rootMargin: '50px' // Add margin for mobile devices
+      },
     )
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current)
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current)
+      }
+    }
+  }, [hasAnimated])
+
+  // Reset hasAnimated when tab changes
+  useEffect(() => {
+    setHasAnimated(false)
+  }, [activeTab])
 
   const getDisplayedCourses = (): Course[] => {
     if (activeTab === "all") {
@@ -204,14 +221,14 @@ export function CoursesSection() {
       <section
         id="courses"
         ref={sectionRef}
-        className="relative py-20 md:py-28 px-6 md:px-12 lg:px-20 bg-cream overflow-hidden"
+        className="relative py-20 md:py-28 px-4 sm:px-6 md:px-12 lg:px-20 bg-cream overflow-hidden"
       >
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue/5 to-green/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-navy/5 to-blue/5 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl" />
         
         <div className="container mx-auto relative z-10">
-          <div className={`text-center mb-16 ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
+          <div className={`text-center mb-12 md:mb-16 ${isVisible || hasAnimated ? "animate-slide-up" : "opacity-0"}`}>
             <div className="inline-flex items-center gap-2 bg-green/20 text-navy px-4 py-2 rounded-full mb-6 backdrop-blur-sm border border-navy/10">
               <Sparkles className="w-4 h-4" />
               <span className="text-sm font-medium tracking-wider uppercase">
@@ -220,7 +237,7 @@ export function CoursesSection() {
             </div>
             
             <div className="mb-6">
-              <h2 className="font-serif text-4xl md:text-5xl text-navy mb-4 tracking-tight">
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-navy mb-4 tracking-tight">
                 Explore Our
                 <span className="block mt-2">
                   All Type Of Courses
@@ -229,22 +246,22 @@ export function CoursesSection() {
               </h2>
             </div>
             
-            <p className="text-navy/70 text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+            <p className="text-navy/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed">
               Curated expertise, transformative learning journeys, and industry-relevant skills 
               designed to elevate your professional trajectory.
             </p>
           </div>
 
           <div
-            className={`flex flex-wrap justify-center gap-3 md:gap-4 mb-16 ${
-              isVisible ? "animate-fade-in animation-delay-200" : "opacity-0"
+            className={`flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-12 md:mb-16 ${
+              isVisible || hasAnimated ? "animate-fade-in animation-delay-200" : "opacity-0"
             }`}
           >
             {tabs.map((tab, index) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-5 py-2.5 rounded-full transition-all duration-300 font-medium text-sm md:text-base transform hover:scale-105 relative overflow-hidden group ${
+                className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-full transition-all duration-300 font-medium text-xs sm:text-sm md:text-base transform hover:scale-105 relative overflow-hidden group ${
                   activeTab === tab.id
                     ? "bg-navy text-white shadow-lg shadow-navy/20"
                     : "text-navy/70 hover:text-navy bg-white hover:bg-green/10 border border-navy/10"
@@ -258,57 +275,57 @@ export function CoursesSection() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {getDisplayedCourses().map((course, index) => (
               <div
                 key={`${course.title}-${index}`}
                 onClick={() => handleCourseClick(course)}
-                className={`group relative rounded-3xl overflow-hidden bg-card shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 cursor-pointer border border-navy/5 ${
-                  isVisible ? "animate-scale-in" : "opacity-0"
+                className={`group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-card shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 sm:hover:-translate-y-3 cursor-pointer border border-navy/5 ${
+                  (isVisible || hasAnimated) ? "animate-scale-in" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${(index % 8) * 0.08}s` }}
               >
                 {/* Card Background Effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white via-cream to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                <div className="relative h-60 overflow-hidden">
+                <div className="relative h-48 sm:h-60 overflow-hidden">
                   <Image
                     src={course.image || "/placeholder.svg"}
                     alt={course.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   {/* Category Badge */}
-                  <div className="absolute top-4 left-4 bg-green/90 text-navy px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 shadow-sm">
+                  <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-green/90 text-navy px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 shadow-sm">
                     {course.category}
                   </div>
                   
                   {/* Level Badge */}
-                  <div className="absolute top-4 right-4 bg-white/90 text-navy px-2.5 py-1 rounded-lg text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0 shadow-sm">
+                  <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/90 text-navy px-2 py-1 sm:px-2.5 rounded-lg text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0 shadow-sm">
                     {course.level}
                   </div>
                   
                   {/* View Button */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 scale-0 group-hover:scale-100 shadow-lg">
-                    <ArrowUpRight className="w-5 h-5 text-navy" />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 p-2 sm:p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 scale-0 group-hover:scale-100 shadow-lg">
+                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-navy" />
                   </div>
                 </div>
 
-                <div className="relative p-5 bg-card group-hover:bg-green/5 transition-colors duration-300">
-                  <div className="mb-4">
-                    <h3 className="font-medium text-navy text-base leading-snug tracking-tight group-hover:text-blue transition-colors duration-300 line-clamp-2 mb-2">
+                <div className="relative p-4 sm:p-5 bg-card group-hover:bg-green/5 transition-colors duration-300">
+                  <div className="mb-3 sm:mb-4">
+                    <h3 className="font-medium text-navy text-sm sm:text-base leading-snug tracking-tight group-hover:text-blue transition-colors duration-300 line-clamp-2 mb-2">
                       {course.title}
                     </h3>
-                    <div className="flex items-center gap-4 text-sm text-navy/60">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs sm:text-sm text-navy/60">
                       <div className="flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5" />
+                        <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                         <span className="font-normal">{course.duration}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <Award className="w-3.5 h-3.5" />
+                        <Award className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                         <span className="font-normal">{course.format}</span>
                       </div>
                     </div>
@@ -316,28 +333,28 @@ export function CoursesSection() {
                   
                   <div className="flex items-center justify-between pt-3 border-t border-navy/10">
                     <div className="flex items-center gap-2">
-                      <BookOpen className="w-4 h-4 text-navy/40 group-hover:text-green transition-colors duration-300" />
+                      <BookOpen className="w-3 h-3 sm:w-4 sm:h-4 text-navy/40 group-hover:text-green transition-colors duration-300" />
                       <span className="text-xs text-navy/50 font-medium tracking-wide group-hover:text-green transition-colors duration-300">
                         View Details
                       </span>
                     </div>
-                    <ArrowUpRight className="w-4 h-4 text-navy/40 group-hover:text-blue group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                    <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4 text-navy/40 group-hover:text-blue group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                   </div>
                 </div>
 
                 {/* Hover Border Effect */}
-                <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-green/20 transition-all duration-500 pointer-events-none" />
+                <div className="absolute inset-0 rounded-2xl sm:rounded-3xl border border-transparent group-hover:border-green/20 transition-all duration-500 pointer-events-none" />
               </div>
             ))}
           </div>
           
           {/* Call to Action */}
-          <div className={`text-center mt-16 ${isVisible ? "animate-fade-in animation-delay-1000" : "opacity-0"}`}>
-            <p className="text-navy/60 text-base font-light tracking-wide mb-6 max-w-xl mx-auto leading-relaxed">
+          <div className={`text-center mt-12 md:mt-16 ${(isVisible || hasAnimated) ? "animate-fade-in animation-delay-800" : "opacity-0"}`}>
+            <p className="text-navy/60 text-sm sm:text-base font-light tracking-wide mb-4 sm:mb-6 max-w-xl mx-auto leading-relaxed">
               Can't find what you're looking for? <span className="font-normal text-blue">Contact our advisors</span> for 
               personalized program recommendations.
             </p>
-            <button className="px-6 py-3 bg-navy text-white rounded-full font-medium tracking-wide text-base hover:shadow-lg hover:shadow-navy/20 transition-all duration-300 hover:scale-105 transform">
+            <button className="px-5 sm:px-6 py-2.5 sm:py-3 bg-navy text-white rounded-full font-medium tracking-wide text-sm sm:text-base hover:shadow-lg hover:shadow-navy/20 transition-all duration-300 hover:scale-105 transform">
               Book a Consultation
             </button>
           </div>

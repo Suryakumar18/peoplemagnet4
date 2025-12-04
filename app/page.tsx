@@ -17,7 +17,11 @@ export default function Home() {
      
       <Header />
       <HeroSection />
-      <CoursesSection />
+
+        <section id="courses" >
+         <CoursesSection />
+      </section>
+    
       <SkillsSection />
       <AboutSection />
       <TestimonialsSection />
