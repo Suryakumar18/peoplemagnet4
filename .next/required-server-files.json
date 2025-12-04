@@ -99,7 +99,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\sk\\Documents\\git peoplemagnet\\peoplemagnet4",
+    "outputFileTracingRoot": "C:\\Users\\sk\\Documents\\git peoplemagnet\\git ush\\peoplemagnet4",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -289,11 +289,11 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
-      "root": "C:\\Users\\sk\\Documents\\git peoplemagnet\\peoplemagnet4"
+      "root": "C:\\Users\\sk\\Documents\\git peoplemagnet\\git ush\\peoplemagnet4"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "C:\\Users\\sk\\Documents\\git peoplemagnet\\peoplemagnet4",
+  "appDir": "C:\\Users\\sk\\Documents\\git peoplemagnet\\git ush\\peoplemagnet4",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

@@ -5,8 +5,13 @@
   "devFiles": [],
   "polyfillFiles": [],
   "lowPriorityFiles": [
+<<<<<<< HEAD
     "static/BU760bzT-RrKEomze-Kje/_ssgManifest.js",
     "static/BU760bzT-RrKEomze-Kje/_buildManifest.js"
+=======
+    "static/9ZUBHcMH3GQP-fDEnSxic/_ssgManifest.js",
+    "static/9ZUBHcMH3GQP-fDEnSxic/_buildManifest.js"
+>>>>>>> c876f6d0214b99fdcb33111a0c4466efaaded6ab
   ],
   "rootMainFiles": []
 }
