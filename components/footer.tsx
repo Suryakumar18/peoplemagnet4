@@ -86,6 +86,7 @@ export function Footer() {
 
         <div className="border-t border-white/10 mt-12 pt-8 text-center text-white/50 text-sm">
           <p>© {new Date().getFullYear()} Just Learn Digital. All rights reserved.</p>
+          <p>A Unit of People Magnet Private Limited</p>
         </div>
       </div>
     </footer>
