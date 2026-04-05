@@ -18,7 +18,7 @@ const courses = {
   marketing: [
     {
       title: "Advance Digital Marketing - Agency Track",
-      duration: "3 months",
+      duration: "6 months",
       image: "/digital-marketing-agency-social-media-analytics-da.jpg",
       category: "Marketing and Sales",
       level: "Advanced",
@@ -26,7 +26,7 @@ const courses = {
     },
     {
       title: "Advance Digital Marketing - Business Growth Track",
-      duration: "3 months",
+      duration: "6 months",
       image: "/business-growth-chart-analytics-marketing-strategy.jpg",
       category: "Marketing and Sales",
       level: "Advanced",
@@ -34,7 +34,7 @@ const courses = {
     },
     {
       title: "Business Mastery and Success Program",
-      duration: "4 months",
+      duration: "6 months",
       image: "/business-leadership-success-corporate-meeting-prof.jpg",
       category: "Marketing and Sales",
       level: "Master",
@@ -52,7 +52,7 @@ const courses = {
     },
     {
       title: "Video Editing & Post-Production Essential",
-      duration: "2 months",
+      duration: "6 months",
       image: "/video-editing-timeline-premiere-pro-creative-studi.jpg",
       category: "Teaching",
       level: "Beginner",
@@ -60,7 +60,7 @@ const courses = {
     },
     {
       title: "AI Powered Advance Video Editing Program",
-      duration: "3 months",
+      duration: "6 months",
       image: "/artificial-intelligence-ai-video-editing-futuristi.jpg",
       category: "Teaching",
       level: "Advanced",
@@ -70,7 +70,7 @@ const courses = {
   coding: [
     {
       title: "MERN Stack Development - Foundation Level",
-      duration: "4 months",
+      duration: "6 months",
       image: "/mern-stack-mongodb-express-react-nodejs-code-progr.jpg",
       category: "Coding",
       level: "Foundation",
@@ -78,7 +78,7 @@ const courses = {
     },
     {
       title: "MERN Stack Development - Advance Level",
-      duration: "3 months",
+      duration: "6 months",
       image: "/advanced-web-development-programming-code-editor-b.jpg",
       category: "Coding",
       level: "Advanced",
@@ -86,7 +86,7 @@ const courses = {
     },
     {
       title: "Full Stack Java Development - Foundation Level",
-      duration: "4 months",
+      duration: "6 months",
       image: "/java-programming-development-code-coffee-cup-orang.jpg",
       category: "Coding",
       level: "Foundation",
@@ -94,7 +94,7 @@ const courses = {
     },
     {
       title: "Full Stack Java Development - Advance Level",
-      duration: "3 months",
+      duration: "6 months",
       image: "/java-spring-boot-enterprise-development-blue-profe.jpg",
       category: "Coding",
       level: "Advanced",
@@ -102,7 +102,7 @@ const courses = {
     },
     {
       title: "Full Stack Python Development - Foundation Level",
-      duration: "4 months",
+      duration: "6 months",
       image: "/python-programming-snake-blue-yellow-code-developm.jpg",
       category: "Coding",
       level: "Foundation",
@@ -110,7 +110,7 @@ const courses = {
     },
     {
       title: "Full Stack Python Development - Advance Level",
-      duration: "3 months",
+      duration: "6 months",
       image: "/python-django-framework-advanced-development-machi.jpg",
       category: "Coding",
       level: "Advanced",
@@ -120,7 +120,7 @@ const courses = {
   design: [
     {
       title: "Advanced UI/UX Design Program",
-      duration: "3 months",
+      duration: "6 months",
       image: "/ui-ux-design-figma-prototype-wireframe-creative-bl.jpg",
       category: "Designing and Creative",
       level: "Advanced",
@@ -128,7 +128,7 @@ const courses = {
     },
     {
       title: "Pro UI/UX Design & Product Experience Program",
-      duration: "4 months",
+      duration: "6 months",
       image: "/product-design-user-experience-mobile-app-design-i.jpg",
       category: "Designing and Creative",
       level: "Professional",
@@ -138,7 +138,7 @@ const courses = {
   language: [
     {
       title: "Spoken English",
-      duration: "2 months",
+      duration: "6 months",
       image: "/spoken-english-communication-language-learning-pro.jpg",
       category: "Language Learning",
       level: "All Levels",
