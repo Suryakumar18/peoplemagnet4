@@ -70,7 +70,7 @@ const courses = {
   coding: [
     {
       title: "MERN Stack Development - Foundation Level",
-      duration: "6 months",
+      duration: "4 months",
       image: "/mern-stack-mongodb-express-react-nodejs-code-progr.jpg",
       category: "Coding",
       level: "Foundation",
@@ -78,7 +78,7 @@ const courses = {
     },
     {
       title: "MERN Stack Development - Advance Level",
-      duration: "6 months",
+      duration: "8 months",
       image: "/advanced-web-development-programming-code-editor-b.jpg",
       category: "Coding",
       level: "Advanced",
@@ -86,7 +86,7 @@ const courses = {
     },
     {
       title: "Full Stack Java Development - Foundation Level",
-      duration: "6 months",
+      duration: "4 months",
       image: "/java-programming-development-code-coffee-cup-orang.jpg",
       category: "Coding",
       level: "Foundation",
@@ -94,7 +94,7 @@ const courses = {
     },
     {
       title: "Full Stack Java Development - Advance Level",
-      duration: "6 months",
+      duration: "8 months",
       image: "/java-spring-boot-enterprise-development-blue-profe.jpg",
       category: "Coding",
       level: "Advanced",
@@ -102,7 +102,7 @@ const courses = {
     },
     {
       title: "Full Stack Python Development - Foundation Level",
-      duration: "6 months",
+      duration: "4 months",
       image: "/python-programming-snake-blue-yellow-code-developm.jpg",
       category: "Coding",
       level: "Foundation",
@@ -110,7 +110,7 @@ const courses = {
     },
     {
       title: "Full Stack Python Development - Advance Level",
-      duration: "6 months",
+      duration: "8 months",
       image: "/python-django-framework-advanced-development-machi.jpg",
       category: "Coding",
       level: "Advanced",
@@ -120,7 +120,7 @@ const courses = {
   design: [
     {
       title: "Advanced UI/UX Design Program",
-      duration: "6 months",
+      duration: "4 months",
       image: "/ui-ux-design-figma-prototype-wireframe-creative-bl.jpg",
       category: "Designing and Creative",
       level: "Advanced",
@@ -128,7 +128,7 @@ const courses = {
     },
     {
       title: "Pro UI/UX Design & Product Experience Program",
-      duration: "6 months",
+      duration: "8 months",
       image: "/product-design-user-experience-mobile-app-design-i.jpg",
       category: "Designing and Creative",
       level: "Professional",
