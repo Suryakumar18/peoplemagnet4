@@ -44,7 +44,7 @@ const courses = {
   teaching: [
     {
       title: "Montessori Teacher Training - Professional Diploma",
-      duration: "6 months",
+      duration: "10 months",
       image: "/montessori-teacher-classroom-children-colorful-edu.jpg",
       category: "Teaching",
       level: "Professional",
