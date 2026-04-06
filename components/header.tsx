@@ -12,7 +12,7 @@ const servicesData = [
     icon: Database,
     courses: [
       { name: "Machine Learning Fundamentals", duration: "3 months", level: "Beginner" },
-      { name: "Deep Learning & Neural Networks", duration: "4 months", level: "Advanced" },
+      { name: "Deep Learning & Neural Networks", duration: "6 months", level: "Advanced" },
       { name: "Data Analytics with Python", duration: "2 months", level: "Beginner" },
       { name: "AI for Business Applications", duration: "3 months", level: "Intermediate" },
       { name: "Natural Language Processing", duration: "4 months", level: "Advanced" },
@@ -26,27 +26,27 @@ const servicesData = [
     icon: BarChart3,
     courses: [
       { name: "Advance Digital Marketing - Agency Track", duration: "6 months", level: "Advanced" },
-      { name: "Advance Digital Marketing - Business Growth Track", duration: "4 months", level: "Intermediate" },
-      { name: "Business Mastery and Success Program", duration: "3 months", level: "All Levels" },
-      { name: "Social Media Marketing", duration: "2 months", level: "Beginner" },
-      { name: "SEO & Content Strategy", duration: "3 months", level: "Intermediate" },
-      { name: "Email Marketing Automation", duration: "2 months", level: "Beginner" },
-      { name: "Marketing Analytics", duration: "3 months", level: "Intermediate" },
-      { name: "Sales Funnel Optimization", duration: "2 months", level: "Intermediate" }
+      { name: "Advance Digital Marketing - Business Growth Track", duration: "6 months", level: "Intermediate" },
+      { name: "Business Mastery and Success Program", duration: "6 months", level: "All Levels" },
+      { name: "Social Media Marketing", duration: "6 months", level: "Beginner" },
+      { name: "SEO & Content Strategy", duration: "6 months", level: "Intermediate" },
+      { name: "Email Marketing Automation", duration: "6 months", level: "Beginner" },
+      { name: "Marketing Analytics", duration: "6 months", level: "Intermediate" },
+      { name: "Sales Funnel Optimization", duration: "6 months", level: "Intermediate" }
     ]
   },
   {
     category: "Teaching & Education",
     icon: BookOpen,
     courses: [
-      { name: "Montessori Teacher Training - Professional Diploma", duration: "12 months", level: "Professional" },
-      { name: "Video Editing & Post-Production Essential", duration: "3 months", level: "Beginner" },
-      { name: "AI Powered Advance Video Editing Program", duration: "4 months", level: "Advanced" },
-      { name: "Classroom Management", duration: "2 months", level: "Beginner" },
-      { name: "Curriculum Development", duration: "3 months", level: "Intermediate" },
-      { name: "Educational Technology", duration: "2 months", level: "Intermediate" },
-      { name: "Special Education", duration: "3 months", level: "Intermediate" },
-      { name: "Online Teaching Strategies", duration: "2 months", level: "Beginner" }
+      { name: "Montessori Teacher Training - Professional Diploma", duration: "10 months", level: "Professional" },
+      { name: "Video Editing & Post-Production Essential", duration: "6 months", level: "Beginner" },
+      { name: "AI Powered Advance Video Editing Program", duration: "6 months", level: "Advanced" },
+      { name: "Classroom Management", duration: "6 months", level: "Beginner" },
+      { name: "Curriculum Development", duration: "6 months", level: "Intermediate" },
+      { name: "Educational Technology", duration: "6 months", level: "Intermediate" },
+      { name: "Special Education", duration: "6 months", level: "Intermediate" },
+      { name: "Online Teaching Strategies", duration: "6 months", level: "Beginner" }
     ]
   },
   {
@@ -54,27 +54,27 @@ const servicesData = [
     icon: Code,
     courses: [
       { name: "MERN Stack Development - Foundation Level", duration: "4 months", level: "Beginner" },
-      { name: "MERN Stack Development - Advance Level", duration: "3 months", level: "Advanced" },
-      { name: "Full Stack Java Development", duration: "6 months", level: "Intermediate" },
-      { name: "Full Stack Python Development", duration: "5 months", level: "Intermediate" },
-      { name: "Mobile App Development", duration: "4 months", level: "Intermediate" },
-      { name: "Cloud Computing & DevOps", duration: "5 months", level: "Advanced" },
-      { name: "Cybersecurity Fundamentals", duration: "3 months", level: "Beginner" },
-      { name: "Blockchain Development", duration: "4 months", level: "Advanced" }
+      { name: "MERN Stack Development - Advance Level", duration: "8 months", level: "Advanced" },
+      { name: "Full Stack Java Development", duration: "8 months", level: "Intermediate" },
+      { name: "Full Stack Python Development", duration: "8 months", level: "Intermediate" },
+      { name: "Mobile App Development", duration: "8 months", level: "Intermediate" },
+      { name: "Cloud Computing & DevOps", duration: "8 months", level: "Advanced" },
+      { name: "Cybersecurity Fundamentals", duration: "8 months", level: "Beginner" },
+      { name: "Blockchain Development", duration: "8 months", level: "Advanced" }
     ]
   },
   {
     category: "Designing and Creative",
     icon: Palette,
     courses: [
-      { name: "Advanced UI/UX Design Program", duration: "5 months", level: "Advanced" },
-      { name: "Pro UI/UX Design & Product Experience Program", duration: "6 months", level: "Professional" },
-      { name: "Graphic Design Mastery", duration: "4 months", level: "Intermediate" },
-      { name: "Motion Graphics & Animation", duration: "4 months", level: "Intermediate" },
-      { name: "3D Modeling & Rendering", duration: "5 months", level: "Advanced" },
-      { name: "Brand Identity Design", duration: "3 months", level: "Intermediate" },
-      { name: "Web Design Fundamentals", duration: "2 months", level: "Beginner" },
-      { name: "Digital Illustration", duration: "3 months", level: "Intermediate" }
+      { name: "Advanced UI/UX Design Program", duration: "8 months", level: "Advanced" },
+      { name: "Pro UI/UX Design & Product Experience Program", duration: "8 months", level: "Professional" },
+      { name: "Graphic Design Mastery", duration: "8 months", level: "Intermediate" },
+      { name: "Motion Graphics & Animation", duration: "8 months", level: "Intermediate" },
+      { name: "3D Modeling & Rendering", duration: "8 months", level: "Advanced" },
+      { name: "Brand Identity Design", duration: "8 months", level: "Intermediate" },
+      { name: "Web Design Fundamentals", duration: "8 months", level: "Beginner" },
+      { name: "Digital Illustration", duration: "8 months", level: "Intermediate" }
     ]
   },
   {
